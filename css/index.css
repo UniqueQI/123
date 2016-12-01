@@ -60,7 +60,7 @@ body, html {
 /*第一屏，登录页面*/
 .loginCont{/*登录页面内容盒子大小以及位置调整*/
 	width: 360px;
-	height: 550px;
+	height: 480px;
 	/*设置内容盒子居中显示*/
 	position: absolute;
 	margin: auto;
@@ -69,7 +69,7 @@ body, html {
 /*第一屏，登录页面*/
 .registerCont{/*注册页面内容盒子大小以及位置调整*/
 	width: 360px;
-	height: 600px;
+	height: 550px;
 
 	/*设置内容盒子居中显示*/
 	position: absolute;
