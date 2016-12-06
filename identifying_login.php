@@ -12,7 +12,8 @@ if(isset($_POST['user'])&&isset($_POST['password'])&&isset($_POST['identify']))
     if($num&&($_POST['identify']==$_SESSION['identify']))
     {
     	//header("location:1.php")
-    	echo "登录成功！";
+    	//echo "登录成功！";
+        header("location:pages/main.html");
     }
     //若该用户名不存在或者密码不正确或验证码不正确
     else

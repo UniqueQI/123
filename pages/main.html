@@ -1,12 +1,111 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<meta charset=utf-8/>
-	<title>index</title>
+	<meta charset="utf-8" />
+	<title>main</title>
 	<link href="../css/main.css" rel="stylesheet">
 </head>
 <body>
-<div id="header">Header</div>
+		<div class="header">
+			<ul>
+				<li><a href="">个人空间</a></li>
+				<li><a href="">立即分享</a></li>
+				<li><a href="">我的分享</a></li>
+				<li><a href="">我的收藏</a></li>
+				<li><a href="">系统消息</a></li>
+			</ul>
+		</div>
+
+		<div class="flexslider">
+			<ul class="slides">
+				<li style="background:url(../images/main/img1.jpg) 50% 0 no-repeat;"></li>
+				<li style="background:url(../images/main/img2.jpg) 50% 0 no-repeat;"></li>
+				<li style="background:url(../images/main/img3.jpg) 50% 0 no-repeat;"></li>
+				<li style="background:url(../images/main/img4.jpg) 50% 0 no-repeat;"></li>
+				<li style="background:url(../images/main/img5.jpg) 50% 0 no-repeat;"></li>
+			</ul>
+		</div>
+
+
+		<div class="search_wrap">
+			<div class="search">
+				<input type="text" name="serch" class="search_input">
+				<a href="#" onclick="return false;" class="search_go"></a>
+			</div>
+			<p class="search_title">每次搜索都是未知探索的开始，许个愿吧少年!</p>
+		</div>
+
+
+		<div class="content_wrap">
+			<div class="content_L">
+				<div class="L_title"><p>最新动态</p><span>+发动态</span></div>
+					<div class="L_main">
+						<div class="userInfo">
+							<img src="../user/3.jpg" alt="" class="L_mainPhoto">
+							<span class="L_mainName">E-cho-Y</span>
+							<div class="L_mainLove"></div>
+							<div class="L_mainCollect"></div>
+						</div>
+						<div class="L_arrow">
+						</div>
+						<div class="L_mainText">
+							我是波浪,你是陌生的岸.我奔流而进,笑哈哈地撞碎在你的膝上.世界上就没有一个人会知道我们俩在什么地方——《云与波》
+						</div>
+					</div>
+
+
+					<div class="L_main">
+						<div class="userInfo">
+							<img src="../user/1.png" alt="" class="L_mainPhoto">
+							<span class="L_mainName">Unique</span>
+							<div class="L_mainLove"></div>
+							<div class="L_mainCollect"></div>
+						</div>
+						<div class="L_arrow">
+						</div>
+						<div class="L_mainText">
+							我和我的影子独处，它说它有悄悄话想对我说，它说它很想念你。原来，我和我的影子都在想你。——柏拉图
+						</div>
+					</div>
+
+
+					<div class="L_main">
+						<div class="userInfo">
+							<img src="../user/2.jpg" alt="" class="L_mainPhoto">
+							<span class="L_mainName">Biu`Biu</span>
+							<div class="L_mainLove"></div>
+							<div class="L_mainCollect"></div>
+						</div>
+						<div class="L_arrow">
+						</div>
+						<div class="L_mainText">
+							那是我们有梦，关于文学，关于爱情，关于穿越世界的旅行。如今我们深夜饮酒，杯子碰到一起，都是梦破碎的声音。——北岛《波兰来客》
+						</div>
+					</div>
+
+				<span>加载更多</span>
+			</div>
+
+			<div class="content_R">
+			</div>
+		</div>
+
+
+		<div class="footer">
+		</div>
+
+<script src="../js/main.base.js"></script>
+<script type="text/javascript" src="../plugin/jquery.min.js"></script>
+<script type="text/javascript" src="../plugin/jquery.flexslider-min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.flexslider').flexslider({
+			directionNav: true,
+			pauseOnAction: false,
+			animation: "slide",
+			slideshowSpeed: 6000
+		});
+	});
+</script>
 </body>
 </html>

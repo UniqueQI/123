@@ -4,38 +4,20 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Login</title>
-	<link rel="stylesheet" type="text/css" href="plugin/jquery.fullPage.css" />
+	<title>Login & Register</title>
+	
+    <!-- CSS样式链接 -->
 	<link href="css/index.css" rel="stylesheet">
 	<link rel=stylesheet href="plugin/examples.css">
-    <script src="js/ajax.js"></script>
-	<style>
-	/* Fixed header and footer.
-	* --------------------------------------- */
-	#header, #footer{
-		position:fixed;
-		height: 50px;
-		display:block;
-		width: 100%;
-		background: #333;
-		z-index:9;
-		text-align:center;
-		color: #f2f2f2;
-		padding: 20px 0 0 0;
-	}
-	#header{
-		top:0px;
-	}
-	#footer{
-		bottom:0px;
-	}
-	</style>
+    <link rel="stylesheet" type="text/css" href="plugin/jquery.fullPage.css" />
+
+    <!-- JavaScript脚本链接 -->
 	<!--[if IE]>
 		<script type="text/javascript">
 			 var console = { log: function() {} };
 		</script>
 	<![endif]-->
-	
+    <script src="js/ajax.js"></script>
 	<script src="plugin/jquery.min.js"></script>
 	<script src="plugin/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="plugin/jquery.slimscroll.min.js"></script>
@@ -55,13 +37,17 @@
 	</script>
 </head>
 <body>
+<!-- 页面头尾盒子 -->
 <div id="header">Header</div>
 <div id="footer">Footer</div>
 
+<!-- 页面选项列表 -->
 <ul id="menu">
 	<li data-menuanchor="firstPage"><a href="#firstPage">登录</a></li>
 	<li data-menuanchor="secondPage"><a href="#secondPage">注册</a></li>
 </ul>
+
+<!-- 页面主体内容，包含两个滑动页面 -->
 <div id="fullpage">
 	<div class="section " id="section0">
 			<div class="loginCont">
@@ -93,14 +79,15 @@
                     </div>
                     
                     <!-- 提交按钮 -->
-                    <input type="submit" name="submit" class="submit1" value="立即提交">
+                    <input type="submit" id="submit1" name="submit" class="submit1" value="立即提交">
 
-                    <!-- 输入框基本输入情况验证 -->
+                    <!-- 表单基本信息验证 -->
                     <script type="text/javascript">
                         var user1=document.getElementById('user1');
                         var password1=document.getElementById('q1');
                         var q=document.getElementById('q');
                         var submit1=document.getElementById('submit1');
+
                         submit1.onclick=function()
                         {
                             if(user1.value==''){
@@ -170,52 +157,54 @@
                     <!-- 提交按钮 -->
                     <input type="submit" name="submit" id="submit2" class="submit2" value="立即提交">
 
-					<!-- 输入框基本输入情况验证 -->
+                    <!-- 表单基本信息验证 -->
                     <script type="text/javascript">
-                    	var user2=document.getElementById('user2');
-						var password2=document.getElementById('p1');
-                    	var repassword2=document.getElementById('p2');
-                    	var p2=document.getElementById('p');
-                    	var submit2=document.getElementById('submit2');
-                    	repassword.onblur=function()
-                    	{
-                    		if (password2.value!=repassword2.value){
-                    			confirm('对不起，您两次输入的密码不一致，请重新输入');
-                    			password2.value='';
-                    			repassword2.value='';
-                    			password2.focus();
-                    		}
-                    	}
-                    	submit2.onclick=function()
-                    	{
-                    		if(user2.value==''){
-                    			confirm('对不起，用户名不能为空，请重新输入');
-                    			user2.focus();
-                    			return false;
-                    		}
-                    		if (password2.value=='') {
-                    			confirm('对不起，密码不能为空，请重新输入');
-                    			password2.focus();
-                    			return false;
-                    		}
-                    		if (password2.value.length<6) {
-                    			confirm('对不起，密码长度不能小于6');
-                    			password2.value='';
-                    			repassword2.value='';
-                    			password2.focus();
-                    			return false;
-                    		}
-                    		if (p2.value=='') {
-                    			confirm('对不起，验证码不能为空，请重新输入');
-                    			p2.focus();
-                    			return false;
-                    		}
-                    		if (p2.value.length!='4') {
-                    			confirm('对不起，验证码为四位数字，请重新输入');
-                    			p2.focus();
-                    			return false;
-                    		}
-                    	}
+                        var user2=document.getElementById('user2');
+                        var password2=document.getElementById('p1');
+                        var repassword2=document.getElementById('p2');
+                        var p2=document.getElementById('p');
+                        var submit2=document.getElementById('submit2');
+
+                        repassword2.onblur=function()
+                        {
+                            if (password2.value!=repassword2.value){
+                                confirm('对不起，您两次输入的密码不一致，请重新输入');
+                                password2.value='';
+                                repassword2.value='';
+                                password2.focus();
+                            }
+                        }
+                        
+                        submit2.onclick=function()
+                        {
+                            if(user2.value==''){
+                                confirm('对不起，用户名不能为空，请重新输入');
+                                user2.focus();
+                                return false;
+                            }
+                            if (password2.value=='') {
+                                confirm('对不起，密码不能为空，请重新输入');
+                                password2.focus();
+                                return false;
+                            }
+                            if (password2.value.length<6) {
+                                confirm('对不起，密码长度不能小于6');
+                                password2.value='';
+                                repassword2.value='';
+                                password2.focus();
+                                return false;
+                            }
+                            if (p2.value=='') {
+                                confirm('对不起，验证码不能为空，请重新输入');
+                                p2.focus();
+                                return false;
+                            }
+                            if (p2.value.length!='4') {
+                                confirm('对不起，验证码为四位数字，请重新输入');
+                                p2.focus();
+                                return false;
+                            }
+                        }                 
                     </script>
                 </form>
             </div>
