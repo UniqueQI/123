@@ -5,14 +5,14 @@
 	<title>main</title>
 	<link href="../css/main.css" rel="stylesheet">
 </head>
-<body>
+<body id="body">
 		<div class="header">
 			<ul>
 				<li><a href="">个人空间</a></li>
 				<li><a href="">立即分享</a></li>
 				<li><a href="">我的分享</a></li>
 				<li><a href="">我的收藏</a></li>
-				<li><a href="">系统消息</a></li>
+				<li><a href="">标签分类</a></li>
 			</ul>
 		</div>
 
@@ -26,7 +26,6 @@
 			</ul>
 		</div>
 
-
 		<div class="search_wrap">
 			<div class="search">
 				<input type="text" name="serch" class="search_input">
@@ -38,65 +37,234 @@
 
 		<div class="content_wrap">
 			<div class="content_L">
-				<div class="L_title"><p>最新动态</p><span>+发动态</span></div>
+				<div class="L_title"><p>最新动态</p><span  class="release">发动态</span></div>
+
+					<form class="releaseForm" id="release" name="release">
+						<div class="L_release" id="L_release" style="display: none;">
+
+							<div class="releaseTitle">
+								<div class="releaseTit_name">分享</div>
+								<div class="releaseTit_close">×</div>
+							</div>
+
+							<div class="releaseText">
+								<div class="releaseTxt_tit">
+									<span class="releaseTxt_titSpan">请选择分享类型标签</span>
+									<div class="releaseChooseWrap">
+										<input type="button" name="" class="releaseChoose" value="音乐+">
+										<input type="button" name="" class="releaseChoose" value="民谣+">
+										<input type="button" name="" class="releaseChoose" value="华语+">
+										<input type="button" name="" class="releaseChoose" value="治愈+">
+										<input type="button" name="" class="releaseChoose" value="电子+">
+									</div>
+									<div class="releaseLabelWrap">
+										<input type="checkbox" readonly="readonly" name="releaseLabel" class="releaseLabel" value="音乐×">
+										<input type="checkbox" readonly="readonly" name="releaseLabel" class="releaseLabel" value="民谣×">
+										<input type="checkbox" readonly="readonly" name="releaseLabel" class="releaseLabel" value="华语×">
+										<input type="checkbox" readonly="readonly" name="releaseLabel" class="releaseLabel" value="治愈×">
+										<input type="checkbox" readonly="readonly" name="releaseLabel" class="releaseLabel" value="电子×">
+									</div>
+								</div>
+								<div class="releaseTxt_cont">
+									<textarea maxlength="200" name="releaseText" required="required" placeholder="嗨，一起聊聊吧！" class="oText"></textarea>
+								</div>
+							</div>
+
+							<div class="releaseFooter">
+								<div class="releaseSource">
+									<label for="original">原创</label><input type="radio" required="required" id="original" name="releaseSource" value="original">
+									<label for="reprinted">转载</label><input type="radio" required="required" id="reprinted" name="releaseSource" value="reprinted">
+								</div>
+								<div class="releaseNow"><input type="submit" class="Labelsubmit" value="立即分享"></div>
+							</div>
+
+						</div>
+
+						<div class="ifYes" style="display: none;">
+							<p>确定退出本次编辑吗？</p>
+							<input type="reset" class="yes" value="确定" name="">
+							<input type="button" class="no" value="取消" name="">
+							<input type="button" class="draft" value="保存草稿" name="">
+						</div>
+					</form>
+					
+
 					<div class="L_main">
 						<div class="userInfo">
-							<img src="../user/3.jpg" alt="" class="L_mainPhoto">
-							<span class="L_mainName">E-cho-Y</span>
-							<div class="L_mainLove"></div>
-							<div class="L_mainCollect"></div>
+							<a href="#"><img src="" alt="" class="L_mainPhoto"></a>
+							<span class="L_mainName" title="作者昵称"></span>
+							<div class="L_mainLove" title="点赞"></div>
+							<div class="L_mainCollect" title="收藏"></div>
 						</div>
 						<div class="L_arrow">
 						</div>
 						<div class="L_mainText">
-							我是波浪,你是陌生的岸.我奔流而进,笑哈哈地撞碎在你的膝上.世界上就没有一个人会知道我们俩在什么地方——《云与波》
+						</div>
+						<div class="L_mainInfo">
+							<span class="L_mainDate" title="分享日期"></span>
+							<span class="L_mainSource" title="作品来源"></span>
+							<span class="L_LoveAmount" title="点赞次数"></span>
+							<span class="L_CollectAmount" title="搜索次数"></span>
 						</div>
 					</div>
 
 
 					<div class="L_main">
 						<div class="userInfo">
-							<img src="../user/1.png" alt="" class="L_mainPhoto">
-							<span class="L_mainName">Unique</span>
-							<div class="L_mainLove"></div>
-							<div class="L_mainCollect"></div>
+							<a href="#"><img src="" alt="" class="L_mainPhoto"></a>
+							<span class="L_mainName" title="作者昵称"></span>
+							<div class="L_mainLove" title="点赞"></div>
+							<div class="L_mainCollect" title="收藏"></div>
 						</div>
 						<div class="L_arrow">
 						</div>
 						<div class="L_mainText">
-							我和我的影子独处，它说它有悄悄话想对我说，它说它很想念你。原来，我和我的影子都在想你。——柏拉图
+						</div>
+						<div class="L_mainInfo">
+							<span class="L_mainDate" title="分享日期"></span>
+							<span class="L_mainSource" title="作品来源"></span>
+							<span class="L_LoveAmount" title="点赞次数"></span>
+							<span class="L_CollectAmount" title="搜索次数"></span>
 						</div>
 					</div>
+
 
 
 					<div class="L_main">
 						<div class="userInfo">
-							<img src="../user/2.jpg" alt="" class="L_mainPhoto">
-							<span class="L_mainName">Biu`Biu</span>
-							<div class="L_mainLove"></div>
-							<div class="L_mainCollect"></div>
+							<a href="#"><img src="" alt="" class="L_mainPhoto"></a>
+							<span class="L_mainName" title="作者昵称"></span>
+							<div class="L_mainLove" title="点赞"></div>
+							<div class="L_mainCollect" title="收藏"></div>
 						</div>
 						<div class="L_arrow">
 						</div>
 						<div class="L_mainText">
-							那是我们有梦，关于文学，关于爱情，关于穿越世界的旅行。如今我们深夜饮酒，杯子碰到一起，都是梦破碎的声音。——北岛《波兰来客》
+						</div>
+						<div class="L_mainInfo">
+							<span class="L_mainDate" title="分享日期"></span>
+							<span class="L_mainSource" title="作品来源"></span>
+							<span class="L_LoveAmount" title="点赞次数"></span>
+							<span class="L_CollectAmount" title="搜索次数"></span>
 						</div>
 					</div>
 
-				<span>加载更多</span>
+
+
+
+
+				<span class="L_more1" id="L_more1">加载更多</span>
+				<span class="L_more2" id="L_more2" style="display: none;">亲，没有更多内容了，请稍后再试！</span>
 			</div>
 
 			<div class="content_R">
-			</div>
-		</div>
+				<div id="tab">
+				    <div class="nav">
+				        <ul>
+				            <li class="active"><a href="#active">搜索热榜</a></li>
+				            <li><a href="#active">点赞最多</a></li>
+				            <li><a href="#active">主题推荐</a></li>
+				        </ul>
+				    </div>
+			        <div class="box" style="display:block;">
+				        <ol>
+					          <li><span><strong>1</strong></span>
+					          		<a href="#active" class="boxOne"></a>
+					          </li>
+					          <li><span><strong>2</strong></span>
+					          		<a href="#active" class="boxOne"></a></li>
+					          <li><span><strong>3</strong></span>
+					          		<a href="#active" class="boxOne"></a></li>
+					          <li><span><strong>4</strong></span>
+					          		<a href="#active" class="boxOne"></a></li>
+					          <li><span><strong>5</strong></span>
+									<a href="#active" class="boxOne"></a></li>
+					          <li><span><strong>6</strong></span>
+					          		<a href="#active" class="boxOne"></a></li>
+					          <li><span><strong>7</strong></span>
+					          		<a href="#active" class="boxOne"></a></li>
+					          <li><span><strong>8</strong></span>
+					          		<a href="#active" class="boxOne"></a></li>
+					    </ol>
+			        </div>
+			        <div class="box">
+				        <ol>
+					          <li><span><strong>1</strong></span>
+					          		<a href="#active" class="boxTwo"></a>
+					          </li>
+					          <li><span><strong>2</strong></span>
+					          		<a href="#active" class="boxTwo"></a></li>
+					          <li><span><strong>3</strong></span>
+					          		<a href="#active" class="boxTwo"></a></li>
+					          <li><span><strong>4</strong></span>
+					          		<a href="#active" class="boxTwo"></a></li>
+					          <li><span><strong>5</strong></span>
+					          		<a href="#active" class="boxTwo"></a></li>
+							  <li><span><strong>6</strong></span>
+							  		<a href="#active" class="boxTwo"></a></li>
+							  <li><span><strong>7</strong></span>
+							  		<a href="#active" class="boxTwo"></a></li>
+							  <li><span><strong>8</strong></span>
+							  		<a href="#active" class="boxTwo"></a></li>
+					    </ol>
+			        </div>
+			        <div class="box">
+				        <ul>
+					          <li><span><strong>1</strong></span>
+					          		<a href="#active" class="boxThree"></a>
+					          </li>
+					          <li><span><strong>2</strong></span>
+					          		<a href="#active" class="boxThree"></a></li>
+					          <li><span><strong>3</strong></span>
+					          		<a href="#active" class="boxThree"></a></li>
+					          <li><span><strong>4</strong></span>
+					          		<a href="#active" class="boxThree"></a></li>
+					          <li><span><strong>5</strong></span>
+					          		<a href="#active" class="boxThree"></a></li>
+					          <li><span><strong>6</strong></span>
+					          		<a href="#active" class="boxThree"></a></li>
+					          <li><span><strong>7</strong></span>
+					          		<a href="#active" class="boxThree"></a></li>
+					          <li><span><strong>8</strong></span><a href="#active">
+					          		<a href="#active" class="boxThree"></a></li>
+					    </ul>
+			        </div>
+				</div><!-- tab -->
 
 
+				<div id="label">
+					<p class="label_nav">热门分类</p>
+					<div id="label_box">
+						<a class="labelText" href="#" target="_blank">民谣</a>
+						<a class="labelText" href="#" target="_blank">华语</a>
+						<a class="labelText" href="#" target="_blank">治愈</a>
+						<a class="labelText" href="#" target="_blank">至美中国风</a>
+						<a class="labelText" href="#" target="_blank">电子</a>
+					</div>
+				</div>
+
+				<div id="contact">
+					<p class="contact_nav">联系我们</p>
+					<div class="contact_box">
+						<ul>
+							<li>手机：18829535746</li>
+							<li>QQ:3053915949</li>
+							<li>微信:DD3053915949</li>
+							<li>more</li>
+						</ul>
+					</div>
+				</div>
+
+			</div><!-- right -->
+		</div><!-- wrap -->
+		
 		<div class="footer">
 		</div>
-
-<script src="../js/main.base.js"></script>
+<script src="../js/ajax_json.js"></script>
 <script type="text/javascript" src="../plugin/jquery.min.js"></script>
 <script type="text/javascript" src="../plugin/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="../plugin/jquery_form.js" ></script>
+<script src="../js/main.base.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
 		$('.flexslider').flexslider({
@@ -106,6 +274,16 @@
 			slideshowSpeed: 6000
 		});
 	});
+</script>
+<script type="text/javascript">
+    $(function () {
+        var options = {
+            success: function (data) {
+                $("#responseText").text(data);
+            }
+        };
+        $("#release").ajaxForm(options);
+    });
 </script>
 </body>
 </html>

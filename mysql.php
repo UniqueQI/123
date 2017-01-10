@@ -1,4 +1,4 @@
-<meta http-equiv="content-type" content="textml;charset=utf-8">
+
 <?php
 #连接数据库
 @$conn=mysql_connect('localhost','root','');
